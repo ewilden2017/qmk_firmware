@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [L_FN] = LAYOUT(
         _______, _______, KC_WHOM, KC_CALC, KC_MSEL, KC_MPRV, KC_MNXT, KC_MPLY, KC_MSTP, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______,          KC_MPLY,
-        _______, RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
+        _______, RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_CALC,
         _______, _______, RGB_VAI, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RESET,            _______,
         KC_CAPS, _______, RGB_VAD, _______, _______, _______, _______, _______, _______, KC_MPRV, KC_MPLY, KC_MNXT,          _______,          _______,
         _______,          _______, RGB_HUI, _______, _______, _______, NK_TOGG, _______, _______, _______, _______,          _______, RGB_MOD, _______,
@@ -90,7 +90,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     // Capslock indicator
     if (host_keyboard_led_state().caps_lock && LED_CAPS >= led_min && LED_CAPS <= led_max) {
-        rgb_matrix_set_color(LED_CAPS, RGB_H3XORANGE);
+        rgb_matrix_set_color(LED_CAPS, RGB_CAPSLOCK);
     }
 
     switch (get_highest_layer(layer_state)) {
@@ -99,7 +99,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             for (uint8_t cnt = 0; cnt < ARRAYSIZE(LED_LIST_NUMPAD); cnt++) {
                 uint8_t index = LED_LIST_NUMPAD[cnt];
                 if (index >= led_min && index <= led_max) {
-                    rgb_matrix_set_color(index, RGB_H3XORANGE);
+                    rgb_matrix_set_color(index, RGB_NUMPAD);
                 }
             }
         }

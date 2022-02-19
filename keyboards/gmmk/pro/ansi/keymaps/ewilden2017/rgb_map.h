@@ -19,7 +19,8 @@
 #ifdef RGB_MATRIX_ENABLE
 
 // Define custom colors
-#    define RGB_H3XORANGE 0x00, 0xE4, 0xFF
+#    define RGB_CAPSLOCK 0xFF, 0xFF, 0xFF
+#    define RGB_NUMPAD 0xFF, 0xFF, 0xFF
 
 #    define ARRAYSIZE(array) sizeof(array) / sizeof(array[0])
 
