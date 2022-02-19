@@ -129,7 +129,7 @@ enum led_location_map {
 // clang-format off
 const uint8_t LED_LIST_NUMPAD[] = {
     LED_I, LED_O, LED_P,
-    LED_K, LED_K, LED_SCLN,
+    LED_K, LED_L, LED_SCLN,
     LED_COMM, LED_DOT, LED_SLSH,
     LED_RALT,
 };
